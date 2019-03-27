@@ -1,5 +1,5 @@
 pub fn square_of_sum(n: u32) -> u32 {
-    (1..=n).fold(0, |acc, x| acc + x).pow(2)
+    (1..=n).sum::<u32>().pow(2)
     //unimplemented!("square of sum of 1...{}", n)
 }
 
