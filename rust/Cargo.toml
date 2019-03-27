@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "armstrong-numbers",
+    "beer-song",
+    "difference-of-squares",
+    "gigasecond",
+    "hello-world",
+    "leap",
+    "nth-prime",
+    "raindrops",
+    "reverse-string"
+]
