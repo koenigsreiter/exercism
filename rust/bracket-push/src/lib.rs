@@ -16,25 +16,22 @@ fn get_opening_tag(bracket: char) -> char {
 
 pub fn brackets_are_balanced(string: &str) -> bool {
     let brackets = "(){}[]";
-    let cleaned_string = string
+    string
         .chars()
         .filter(|input_char| brackets.chars().any(|bracket| &bracket == input_char))
-        .collect::<String>();
-
-    let mut bracket_vec: Vec<char> = vec![];
-    for bracket in cleaned_string.chars() {
-        if is_opening(bracket) {
-            bracket_vec.push(bracket)
-        } else if !bracket_vec.is_empty()
-            && get_opening_tag(bracket) == bracket_vec[bracket_vec.len() - 1]
-        {
-            bracket_vec.pop();
-        } else {
-            return false;
-        }
-    }
-
-    bracket_vec.is_empty()
+        .fold(Vec::new(), |mut brackets, bracket| {
+            if is_opening(bracket) {
+                brackets.push(bracket)
+            } else if !brackets.is_empty()
+                && get_opening_tag(bracket) == brackets[brackets.len() - 1]
+            {
+                brackets.pop();
+            } else {
+                brackets.push(bracket);
+            }
+            brackets
+        })
+        .is_empty()
 
     // unimplemented!(
     //     "Check if the string \"{:?}\" contains balanced brackets",
