@@ -10,5 +10,6 @@ members = [
     "raindrops",
     "reverse-string",
     "sum-of-multiples",
-    "grains"
+    "grains",
+    "bracket-push"
 ]
