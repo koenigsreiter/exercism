@@ -7,7 +7,7 @@ pub fn raindrops(n: u32) -> String {
         (_, 0, _, _) => String::from("Pling"),
         (_, _, 0, _) => String::from("Plang"),
         (_, _, _, 0) => String::from("Plong"),
-        (n, _, _, _) => n.to_string()
+        (n, _, _, _) => n.to_string(),
     }
     //unimplemented!("what sound does Raindrop #{} make?", n)
 }

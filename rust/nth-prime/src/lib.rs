@@ -2,18 +2,16 @@ use std::iter::Iterator;
 
 struct PrimeStream {
     primes: Vec<u32>,
-    current: u32
+    current: u32,
 }
 
 impl PrimeStream {
-
     pub fn new() -> PrimeStream {
         PrimeStream {
             primes: vec![],
-            current: 2
+            current: 2,
         }
     }
-
 }
 
 impl Iterator for PrimeStream {
@@ -30,7 +28,6 @@ impl Iterator for PrimeStream {
         None
     }
 }
-
 
 pub fn nth(n: u32) -> u32 {
     let mut ps = PrimeStream::new();

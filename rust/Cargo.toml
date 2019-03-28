@@ -8,5 +8,7 @@ members = [
     "leap",
     "nth-prime",
     "raindrops",
-    "reverse-string"
+    "reverse-string",
+    "sum-of-multiples",
+    "grains"
 ]
