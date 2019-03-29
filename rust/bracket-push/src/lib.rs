@@ -20,9 +20,8 @@ pub fn brackets_are_balanced(string: &str) -> bool {
         .chars()
         .filter(|input_char| brackets.chars().any(|bracket| &bracket == input_char))
         .fold(Vec::new(), |mut brackets, bracket| {
-            if is_opening(bracket) {
-                brackets.push(bracket)
-            } else if !brackets.is_empty()
+            if !brackets.is_empty()
+                && !is_opening(bracket)
                 && get_opening_tag(bracket) == brackets[brackets.len() - 1]
             {
                 brackets.pop();
