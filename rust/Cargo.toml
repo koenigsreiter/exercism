@@ -13,5 +13,6 @@ members = [
     "grains",
     "bracket-push",
     "bob",
-    "proverb"
+    "proverb",
+    "prime-factors"
 ]
