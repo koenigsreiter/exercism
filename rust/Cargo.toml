@@ -12,5 +12,6 @@ members = [
     "sum-of-multiples",
     "grains",
     "bracket-push",
-    "bob"
+    "bob",
+    "proverb"
 ]
