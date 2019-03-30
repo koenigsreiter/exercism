@@ -11,5 +11,6 @@ members = [
     "reverse-string",
     "sum-of-multiples",
     "grains",
-    "bracket-push"
+    "bracket-push",
+    "bob"
 ]
